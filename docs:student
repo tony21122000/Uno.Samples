@@ -1,0 +1,25 @@
+import java.util.*; class Marks 
+{ 
+public static void main() 
+{ 
+Scanner sc=new Scanner(System.in); 
+int i, max=0; 
+String name[]=new String[20], x=""; 
+int a[]=new int[20]; 
+System.out.println("Enter marks of 20 students..."); 
+for(i=0;i<20;i++) 
+{ 
+System.out.print("Enter name: "); 
+name[i]=sc.nextLine(); 
+System.out.print("Enter marks: "); 
+a[i]=sc.nextInt(); 
+ System.out.println(); 
+if(a[i]>max) 
+{ 
+x=name[i]; max=a[i]; 
+} 
+} 
+System.out.println("Top Scorer: "+x); 
+System.out.println("His/Her marks: "+max); 
+} 
+}
