@@ -1,0 +1,61 @@
+Import.java.util.ArrayList; 
+import java.util.List; 
+import. java.util.Scanner; 
+ class Product 
+{ 
+private 
+String pname; 
+int quantity; 
+double price; 
+double tPrice; 
+Product(String pname, int quantity, double price, double tPrice) 
+{ 
+ this.pname = pname
+this.quantity = quantity; 
+ this.pric e = price; 
+this.tPrice = tPrice; 
+} 
+getter methods 
+public String getPname() 
+ { return pname; 
+}
+public int getQuantity() { return quantity; 
+}
+public double getPrice() { return price; 
+}
+public double getTPrice() { return tPrice; 
+}
+public static void displayFormat() { 
+System.out.print(“\nName ArrayList Price Total Price\n"); 
+}
+public void display() { System.out.format("%-9s %8d %10.2f %10.2f\n", pname, 
+quantity, price, tPrice);
+}
+}
+public class ShoppingBill { 
+public static void main(String args[ ]) { 
+String productName = null; int ArrayList = 0; 
+double price = 0.0; double tPrice = 0.0; double ovAPrice = 0.0; char choice = '\0'; 
+Scanner scan = new Scanner(System.in); 
+List<Product> product = new ArrayList<Product>(); 
+do { 
+System.out.println("Enter product details,"); 
+System.out.print("Name: "); 
+productName = scan.nextLine(); System.out.print("ArrayList: "); 
+ArrayList = scan.nextInt(); 
+System.out.print("Price (per item): "); 
+ price = scan.nextDouble(); 
+tPrice = price * ArrayList; 
+ovAPrice += tPrice; 
+} 
+product.add( new Product(productName, ArrayList, price, tPrice) ); 
+System.out.print("Want to add more item? (y or n): "); choice = scan.next().charAt(0); 
+scan.nextLine(); 
+} while (choice == 'y' || choice == 'Y'); 
+displayFormat(); for (Product p : 
+product) { p.display(); 
+}
+System.out.println("\nTotal Price = " + ovAPrice); 
+Scanner scan.close(); 
+}
+}
