@@ -1,0 +1,30 @@
+ import java.util.*; 
+public class BookStore 
+{ 
+String Name, Author, Publication; 
+double Cost; 
+void input() 
+{ 
+Scanner Sc = new Scanner(System.in); 
+System.out.print("Enter name of the book : "); 
+Name = Sc.nextLine(); System.out.print("Enter author : "); 
+Author = Sc.nextLine(); System.out.print("Enter publication : "); 
+Publication = Sc.nextLine(); System.out.print("Enter cost : "); Cost = Sc.nextDouble(); 
+} 
+void calculate() 
+{ 
+double Discount = Cost*(13.5 / 100); double Cost_After = Cost - Discount; 
+System.out.println("Discount : " + Discount); System.out.println("Cost after discount : " 
++ Cost_After); 
+} 
+void display() 
+{ 
+System.out.println("Book Name : " + Name); System.out.println("Author : " + Author); 
+System.out.println("Publication : " + Publication); System.out.println("Cost : " + Cost); 
+} 
+public static void main(String args[]) 
+{ 
+BookStore b = new BookStore(); b.input(); 
+b.display(); b.calculate(); 
+} 
+}
